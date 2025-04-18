@@ -1,97 +1,90 @@
 # FlowForge
 
-**FlowForge** is a smart workflow automation tool designed to help internal business teams streamline multi-step approval processes — with the help of an integrated AI assistant.
+**FlowForge** is a dev portfolio project. 
 
-This project is a full-stack example application showcasing:
-- TypeScript + Vue 3 frontend
-- AWS CDK infrastructure
-- Serverless backend (Lambda, API Gateway, Cognito)
-- DynamoDB for persistence
-- AI-powered support chat (OpenAI or Amazon Bedrock)
-- Full documentation: user stories, architecture, requirements
+## Showcase Project
+
+This project is designed to showcase:
+
+- Modern web development practices with React and TypeScript
+- A cloud-native, serverless architecture using AWS CDK
+- Scalable infrastructure patterns
+- Real-world documentation workflows
+- AI integration for improved user experience
+- Role-based access control with audit support
 
 ---
+
+## Stack
+This project is a full-stack example application demonstrating:
+- TypeScript + React frontend
+- AWS CDK infrastructure (fully serverless)
+- Lambda + App Sync GraphQL
+- Cognito for authentication and user management
+- DynamoDB for persistence
+- AI-powered support chat (OpenAI or Amazon Bedrock)
+- Full documentation including user stories, architecture, and requirements
 
 ## Features
 
-- Authentication & Roles (Sales, Approver, Admin, Partner)
-- Workflow Engine: sales → partner form → approval
-- AI Assistant: context-aware chat bot to guide users
-- Admin Dashboard: view requests, users, audit logs
-- Approval History & Audit Trail
-- Fully Serverless Architecture (CDK)
+- Role-based authentication (Sales, Approver, Admin, Partner)
+- Workflow engine: sales → partner form → approval
+- AI assistant: context-aware chatbot to guide users
+- Admin dashboard: view requests, users, audit logs
+- Approval history and audit trail
+- Fully serverless architecture using AWS CDK
 
 ---
+
 
 ## Project Structure
 
 ```bash
-flowforge/
-├── frontend/       # Vue 3 app (TypeScript)
-├── backend/        # API handlers, business logic
-├── cdk/            # AWS CDK infrastructure
-├── docs/           # User stories, requirements, architecture
-│   ├── user-stories.md
-│   ├── requirements.md
-│   └── architecture.md
-├── scripts/        # Utility scripts (dev tools, setup)
-├── .github/        # GitHub Actions, issue templates
-└── README.md       # You are here
+.
+├── LICENSE
+├── README.md
+├── backend               # Lambda functions and backend logic
+├── cdk                   # AWS CDK infrastructure (TypeScript)
+│   ├── bin               # CDK entrypoint
+│   ├── lib               # CDK stacks: auth, users, certificates
+│   ├── test              # Unit tests for CDK stacks
+├── docs                  # Product specs and technical documentation
+│   └── product-specs
+│       └── epic-admin-access
+├── frontend-client       # React + TypeScript web client
+│   ├── public
+│   ├── src
+│   │   ├── pages         # login, confirm, home
+│   │   ├── features      # auth module
+│   │   ├── tests
+└── scratch               # Temporary or sandbox scripts/files
 ```
 
 ---
 
 ## Documentation
 
-This repo emphasizes good documentation practices.
+Find product planning and architectural documentation in the `/docs` folder.
 
-Check the `/docs` folder for:
+- `user-stories.md`: User-centric goals and workflow mapping  
+- `requirements.md`: Functional and non-functional requirements  
+- `architecture.md`: System design, diagrams, and data flow descriptions  
 
-- `user-stories.md`: User-centric goals and flows  
-- `requirements.md`: Functional & non-functional specs  
-- `architecture.md`: System design, diagrams, data flow  
+Note: Keep these updated with each new feature branch or epic.
 
 ---
 
 ## Tech Stack
 
-| Layer       | Tech                              |
-|-------------|------------------------------------|
-| Frontend    | Vue 3 + TypeScript                 |
-| Backend     | Node.js + TypeScript (Lambda)      |
-| Infrastructure | AWS CDK (TypeScript)           |
-| Database    | DynamoDB                           |
-| Authentication | Amazon Cognito                 |
-| AI Support  | OpenAI API / Amazon Bedrock        |
-| DevOps      | GitHub Actions, CDK Pipelines      |
-
----
-
-## Use Case Example
-
-As a Sales user, I submit a request for a new partner.  
-The partner fills out a form.  
-Approvers get notified and either approve or reject the submission.  
-The AI assistant helps guide everyone through the process.
-
----
-
-## For Job Reviewers
-
-This project is designed to demonstrate:
-
-- Modern frontend skills (Vue 3 + TypeScript)  
-- Cloud-native serverless architecture (CDK + AWS)  
-- Scalable infrastructure patterns  
-- Real-world documentation workflows  
-- AI integration for user experience  
-- Role-based access control  
-
----
-
-## Status
-
-In Progress – currently setting up foundational structure and documentation.
+| Layer          | Tech                                 |
+|----------------|--------------------------------------|
+| Frontend       | React + TypeScript                   |
+| Backend        | Node.js + TypeScript (AWS Lambda)    |
+| Infrastructure | AWS CDK (TypeScript)                 |
+| Database       | DynamoDB                             |
+| Authentication | Amazon Cognito                       |
+| AI Assistant   | OpenAI API / Amazon Bedrock          |
+| DevOps         | GitHub Actions, CDK Pipelines        |
 
 ---
 

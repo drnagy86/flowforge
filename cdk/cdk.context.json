@@ -1,0 +1,10 @@
+{
+  "hosted-zone:account=484474575687:domainName=derricknagy.dev:region=us-east-1": {
+    "Id": "/hostedzone/Z01397552FQBS44H0LJL8",
+    "Name": "derricknagy.dev."
+  },
+  "hosted-zone:account=484474575687:domainName=derricknagy.dev:region=us-east-2": {
+    "Id": "/hostedzone/Z01397552FQBS44H0LJL8",
+    "Name": "derricknagy.dev."
+  }
+}
