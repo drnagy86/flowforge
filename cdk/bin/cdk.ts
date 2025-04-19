@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// cdk/bin/cdk.ts
 import * as cdk from 'aws-cdk-lib';
 import { FlowForgeStaticSiteStack } from '../lib/cdk-stack';
 import { FlowForgeAuthStack } from '../lib/auth-stack';
