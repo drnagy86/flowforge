@@ -25,7 +25,7 @@ export class FlowForgeStaticSiteStack extends Stack {
     });
 
     // Retrieve the certificate ARN from SSM Parameter Store
-    const certArn = this.node.tryGetContext('certArn');
+    const certArn = this.node.tryGetContext('certArnFlowForge');
     if (!certArn) {
       throw new Error('Missing certArn context value');
     }

@@ -2,11 +2,9 @@ import { Stack, StackProps, CfnOutput } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as acm from 'aws-cdk-lib/aws-certificatemanager';
 import * as route53 from 'aws-cdk-lib/aws-route53';
-// import * as ssm from 'aws-cdk-lib/aws-ssm';
 
 export interface FlowForgeCertStackProps extends StackProps {
   rootDomain: string;
-  subDomain: string;
 }
 
 export class FlowForgeCertStack extends Stack {
@@ -20,15 +18,15 @@ export class FlowForgeCertStack extends Stack {
       domainName: props.rootDomain,
     });
 
-    const cert = new acm.Certificate(this, 'FlowForgeCert', {
-      domainName: props.subDomain,
+    const cert = new acm.Certificate(this, 'UnifiedCert', {
+      domainName: props.rootDomain, // derricknagy.dev
+      subjectAlternativeNames: [`*.${props.rootDomain}`], // *.derricknagy.dev
       validation: acm.CertificateValidation.fromDns(hostedZone),
     });
 
-
-    new CfnOutput(this, 'FlowForgeCertArn', {
+    new CfnOutput(this, 'UnifiedCertArn', {
       value: cert.certificateArn,
-      description: 'The ARN of the FlowForge certificate. Update in cdk.json under context.',
+      description: 'The ARN of the wildcard + root certificate. Update in cdk.json under context.',
     });
   }
 }

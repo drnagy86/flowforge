@@ -28,6 +28,11 @@ npx cdk deploy FlowForgeStaticSiteStack --profile personal
 After that, the cert arn is saved in parameter store and doesn't need to be updated
 
 
+export AWS_PROFILE=personal
+
+
+
+
 # Seed Admin User Manually if first deploy
 Don't forget to create the initial admin user in Cognito manually if this is the first deployment.
 Adjust the temporary password when using this command.

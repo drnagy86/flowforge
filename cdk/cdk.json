@@ -17,7 +17,9 @@
     ]
   },
   "context": {
-    "certArn": "arn:aws:acm:us-east-1:484474575687:certificate/ee300dff-52df-458b-8236-72e671d282b6",
+    "certArnUnified": "arn:aws:acm:us-east-1:484474575687:certificate/23bc80b1-675d-486a-a541-ab28a8c31095",
+    "certArnDevSite": "arn:aws:acm:us-east-1:484474575687:certificate/76eb872f-ed44-4859-be80-2b546e24b1b5",  
+    "certArnRoot": "arn:aws:acm:us-east-1:484474575687:certificate/76eb872f-ed44-4859-be80-2b546e24b1b5",  
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
