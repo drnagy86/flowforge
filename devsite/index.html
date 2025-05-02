@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Derrick Nagy | Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link href="/src/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-background text-primaryText font-sans">
+
+  <!-- Sidebar -->
+  <aside class="hidden sm:fixed sm:top-0 sm:left-0 sm:h-full sm:w-20 sm:flex sm:flex-col sm:items-center sm:justify-between py-6 bg-black">
+    <div class="flex flex-col gap-8">
+      <a href="#about" class="group flex flex-col items-center text-secondaryText hover:text-accent transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             fill="none" 
+             viewBox="0 0 24 24" 
+             stroke-width="1.5" 
+             stroke="currentColor" 
+             class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875
+                c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125
+                c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <span class="sr-only">About</span>
+      </a>
+      
+      <a href="#experience" class="group flex flex-col items-center text-secondaryText hover:text-accent transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             fill="none" viewBox="0 0 24 24" 
+             stroke-width="1.5" stroke="currentColor" 
+             class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 
+                   2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 
+                   0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 
+                   0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 
+                   0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 
+                   0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 
+                   1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 
+                   0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 
+                   0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+        </svg>
+        <span class="sr-only">Experience</span>
+      </a>
+      
+      <a href="#projects" class="group flex flex-col items-center text-secondaryText hover:text-accent transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             fill="none" viewBox="0 0 24 24" 
+             stroke-width="1.5" stroke="currentColor" 
+             class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+                d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 
+                   0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+        </svg>
+        <span class="sr-only">Projects</span>
+      </a>
+      
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <!-- GitHub -->
+      <a href="https://github.com/drnagy86" target="_blank" class="group flex flex-col items-center text-secondaryText hover:text-accent transition">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             fill="currentColor" viewBox="0 0 24 24" 
+             class="w-6 h-6">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 0C5.37 0 0 5.373 0 12a12 12 0 008.205 11.386c.6.11.82-.258.82-.577v-2.04c-3.338.726-4.042-1.61-4.042-1.61-.546-1.388-1.333-1.758-1.333-1.758-1.089-.745.083-.73.083-.73 1.204.084 1.837 1.236 1.837 1.236 1.07 1.833 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.604-2.665-.306-5.466-1.334-5.466-5.933 0-1.311.468-2.382 1.235-3.222-.124-.303-.535-1.527.117-3.176 0 0 1.007-.322 3.3 1.23a11.5 11.5 0 013.004-.403c1.02.005 2.045.137 3.003.403 2.292-1.552 3.296-1.23 3.296-1.23.655 1.649.244 2.873.12 3.176.77.84 1.233 1.911 1.233 3.222 0 4.61-2.805 5.624-5.476 5.921.431.372.816 1.102.816 2.222v3.293c0 .322.216.694.824.576A12.004 12.004 0 0024 12c0-6.627-5.373-12-12-12z" />
+        </svg>
+        <span class="sr-only">GitHub</span>
+      </a>
+      
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/derrick-nagy-a1b5a3222/" target="_blank" class="group flex flex-col items-center text-secondaryText hover:text-accent transition">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             fill="currentColor" viewBox="0 0 24 24" 
+             class="w-6 h-6">
+          <path d="M4.98 3.5C4.98 5 3.9 6 2.5 6S0 5 0 3.5 
+                   1.1 1 2.5 1s2.48 1 2.48 2.5zM0 
+                   8h5v14H0zM7.5 8h4.8v2.2h.07c.67-1.3 
+                   2.3-2.67 4.7-2.67 5 0 5.9 3.3 5.9 
+                   7.5V22h-5v-6.4c0-1.6-.03-3.7-2.25-3.7-2.27 
+                   0-2.6 1.75-2.6 3.6V22h-5z" />
+        </svg>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      
+      
+    </div>
+  </aside>
+
+  <!-- Subtle Background Effect -->
+  <div id="bg-effect" class="fixed inset-0 z-0 pointer-events-none"></div>
+  
+  <!-- Mobile Links -->
+  <div class="flex justify-center gap-6 py-4 sm:hidden">
+    <a href="https://github.com/drnagy86" target="_blank" class="text-secondaryText hover:text-accent transition-colors duration-200">
+      <!-- GitHub SVG inline -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 0C5.37 0 0 5.373 0 12a12 12 0 008.205 11.386c.6.11.82-.258.82-.577v-2.04c-3.338.726-4.042-1.61-4.042-1.61-.546-1.388-1.333-1.758-1.333-1.758-1.089-.745.083-.73.083-.73 1.204.084 1.837 1.236 1.837 1.236 1.07 1.833 2.807 1.304 3.492.997.108-.775.42-1.305.763-1.604-2.665-.306-5.466-1.334-5.466-5.933 0-1.311.468-2.382 1.235-3.222-.124-.303-.535-1.527.117-3.176 0 0 1.007-.322 3.3 1.23a11.5 11.5 0 013.004-.403c1.02.005 2.045.137 3.003.403 2.292-1.552 3.296-1.23 3.296-1.23.655 1.649.244 2.873.12 3.176.77.84 1.233 1.911 1.233 3.222 0 4.61-2.805 5.624-5.476 5.921.431.372.816 1.102.816 2.222v3.293c0 .322.216.694.824.576A12.004 12.004 0 0024 12c0-6.627-5.373-12-12-12z" />
+      </svg>
+    </a>
+
+    <a href="https://www.linkedin.com/in/derrick-nagy-a1b5a3222/  " target="_blank" class="text-secondaryText hover:text-accent transition-colors duration-200">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+        <path d="M4.98 3.5C4.98 5 3.9 6 2.5 6S0 5 0 3.5 
+                   1.1 1 2.5 1s2.48 1 2.48 2.5zM0 
+                   8h5v14H0zM7.5 8h4.8v2.2h.07c.67-1.3 
+                   2.3-2.67 4.7-2.67 5 0 5.9 3.3 5.9 
+                   7.5V22h-5v-6.4c0-1.6-.03-3.7-2.25-3.7-2.27 
+                   0-2.6 1.75-2.6 3.6V22h-5z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  <main class="ml-0 sm:ml-20 px-4 sm:px-8 relative z-10">
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen flex flex-col justify-center px-4">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-4">Hi, I'm Derrick Nagy.</h1>
+      <p class="text-lg text-secondaryText max-w-2xl leading-relaxed">
+        Director of Systems Integrations with extensive experience building cloud-native platforms in healthcare and pharmacy technology. 
+        I specialize in scalable API integrations, AWS serverless infrastructure, and full-stack development.
+        <br><br>
+        Passionate about delivering reliable, efficient systems that enhance pharmacy, provider, patient workflows.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <span class="px-4 py-2 bg-accent text-background rounded-full text-sm">AWS</span>
+        <span class="px-4 py-2 bg-accent text-background rounded-full text-sm">Python</span>
+        <span class="px-4 py-2 bg-accent text-background rounded-full text-sm">Node.js</span>
+        <span class="px-4 py-2 bg-accent text-background rounded-full text-sm">PostgreSQL</span>
+        <span class="px-4 py-2 bg-accent text-background rounded-full text-sm">React</span>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24">
+      <h2 class="text-3xl font-bold mb-8">Experience</h2>
+    
+      <!-- Job 1 -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold">PerfectRx (formerly SmartScripts)</h3>
+        <p class="text-secondaryText text-sm mb-2">Director of Systems Integrations (Mar 2025 – Present)</p>
+        <ul class="list-disc list-inside space-y-2 text-secondaryText">
+          <li>Owned platform integration roadmap and feature set in collaboration with CTO and product leadership.</li>
+          <li>Onboarded 1,000+ clinics to the eScribe platform within one year.</li>
+          <li>Led integration and technical support for 10 API partners through onboarding and maintenance.</li>
+          <li>Maintained public API documentation and release notes.</li>
+          <li>Coordinated SureScripts integration development and compliance readiness.</li>
+          <li>Drove system reliability, partner experience, and support workflow improvements.</li>
+        </ul>
+      </div>
+    
+      <!-- Job 2 -->
+      <div class="mb-12">
+        <p class="text-secondaryText text-sm mb-2">Supervisor, IT & Product Owner (Dec 2023 – Mar 2025)</p>
+        <ul class="list-disc list-inside space-y-2 text-secondaryText">
+          <li>Managed product backlogs and roadmaps for internal and external healthcare platforms.</li>
+          <li>Led partner API onboarding, compliance validation, and platform integration support.</li>
+          <li>Oversaw IT infrastructure evaluations and vendor management for security and efficiency improvements.</li>
+          <li>Supervised team of developers and IT specialists, including hiring and performance evaluations.</li>
+        </ul>
+      </div>
+    
+      <!-- Job 3 -->
+      <div class="mb-12">
+        <p class="text-secondaryText text-sm mb-2">Information Technology Developer (Aug 2022 – Dec 2023)</p>
+        <ul class="list-disc list-inside space-y-2 text-secondaryText">
+          <li>Designed and managed applications, including REST APIs for pharmacy operations.</li>
+          <li>Integrated external healthcare systems via API for streamlined data exchange and automation.</li>
+          <li>Implemented CI/CD pipelines, improving deployment efficiency and reliability.</li>
+          <li>Supported AWS cloud infrastructure and internal SaaS tools.</li>
+        </ul>
+      </div>
+    
+      <!-- Education -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-semibold mb-4">Education</h3>
+        <ul class="list-disc list-inside space-y-2 text-secondaryText">
+          <li>AAS in Computer Software Development – Kirkwood Community College (2022)</li>
+          <li>Java Programming Certificate, .NET Programming Certificate – Kirkwood Community College (2022)</li>
+          <li>Master of Education, Curriculum and Instruction – Houston Baptist University (2013)</li>
+          <li>BA in English & Linguistics (Emphasis in Teaching) – University of Iowa (2008)</li>
+        </ul>
+      </div>
+    
+      <!-- Certifications -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-semibold mb-4">Certifications</h3>
+        <ul class="list-disc list-inside space-y-2 text-secondaryText">
+          <li>AWS Certified Developer – Associate (Issued Aug 2023)</li>
+        </ul>
+      </div>
+    
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24">
+      <h2 class="text-3xl font-bold mb-8">Projects</h2>
+    
+      <div class="space-y-12">
+    
+        <!-- FlowForge -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            FlowForge
+            <a href="https://github.com/drnagy86/flowforge" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            A full-stack serverless app demonstrating AWS CDK, Lambda, Cognito, DynamoDB, and a React + TypeScript frontend. Features role-based access control, AI chatbot assistant, and full documentation.
+          </p>
+        </div>
+    
+        <!-- Portfolio Site -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            Portfolio Website (Vite + Tailwind)
+            <a href="https://github.com/drnagy86/flowforge" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            This site — a minimalist, high-performance portfolio built using Vite, TailwindCSSs, and vanilla JavaScript. Designed to emphasize clarity, scalability, and clean user experience.
+          </p>
+        </div>
+    
+        <!-- Rubric Creator MEAN -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            Rubric Creator App (MEAN Stack)
+            <a href="https://github.com/drnagy86/HonorsProject" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            A MEAN stack app to create reusable educational rubrics, with examples included for training and onboarding educators. Honor project winner at KCC 2022.
+          </p>
+        </div>
+    
+        <!-- Capstone Project -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            Software Development Capstone
+            <a href="https://github.com/drnagy86/Kirkwood-Capstone-2022" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            Group project building a full-featured rubric management system with .NET, WPF, MVC, and SQL Server. Desktop and web versions shared a common backend.
+          </p>
+        </div>
+    
+        <!-- DNA Sample Database -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            DNA Sample Tracking Database
+            <a href="https://github.com/drnagy86/sars_cov_2_db" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            Designed a relational database for a University of Iowa research lab to track DNA samples from SARS-CoV-2 study volunteers.
+          </p>
+        </div>
+    
+        <!-- .NET WPF/MVC Rubric Manager -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            .NET WPF/MVC Rubric Manager
+            <a href="https://github.com/drnagy86/.NET--Final-Project" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            Desktop and web app for rubric creation, built with WPF and MVC in .NET. Shared a Microsoft SQL Server backend.
+          </p>
+        </div>
+    
+        <!-- Java EE Backend Project -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            Java EE Web Server Backend
+            <a href="https://github.com/drnagy86/java3-final-project" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            Server-side Java EE application showcasing fundamental backend development concepts for web services.
+          </p>
+        </div>
+    
+        <!-- Django Development Blog -->
+        <div>
+          <p class="text-secondaryText text-sm mb-1 flex items-center gap-2">
+            Development Blog (Django)
+            <a href="https://github.com/drnagy86/StudentBlog" target="_blank" class="text-secondaryText hover:text-accent text-base" aria-label="GitHub Link">↗</a>
+          </p>
+          <p class="text-secondaryText max-w-2xl leading-relaxed">
+            A Django-based blog platform deployed on Heroku with CRUD operations and user authentication.
+          </p>
+        </div>
+    
+      </div>
+    </section>
+    
+    
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
