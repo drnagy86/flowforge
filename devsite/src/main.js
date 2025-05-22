@@ -30,7 +30,7 @@ document.addEventListener('mousemove', (e) => {
   bgEffect.style.background = `
     radial-gradient(
       600px circle at ${x * 100}% ${y * 100}%,
-      rgba(255, 255, 255, 0.03),
+      rgba(0, 184, 148, 0.1),
       transparent 80%
     )
   `;
