@@ -1,42 +1,80 @@
-# The CDK Project
+# FlowForge CDK – Infrastructure
 
-# Log on to AWS Console
-```
+This CDK project defines the infrastructure for the **FlowForge** web app and the **Dev Portfolio** site. It uses AWS CDK in TypeScript to provision all resources including authentication, storage, static hosting, serverless compute, certificates, and routing.
+
+---
+
+## 🔧 Project Scope
+
+This repo manages:
+
+- Infrastructure for the full-stack **FlowForge** app (Cognito, Lambda, GraphQL, DynamoDB)
+- Static site deployment for the **Dev Portfolio** (derricknagy.dev)
+- Certificate management and domain routing
+- Optional root redirect setup
+
+All stacks are modular and can be deployed independently. Certificate stacks are separated due to AWS region restrictions.
+
+---
+
+## ⚙️ Local AWS Setup
+
+```bash
+# Log into AWS
 aws sso login --profile personal
 ```
 
-# Deploy the stack
-* if first time,
+```bash
+# Optional (Set default profile for terminal session)
+export AWS_PROFILE=personal
 ```
+
+---
+
+## 🚀 First-Time Deployment
+
+If this is the first time deploying:
+
+```bash
 npx cdk bootstrap --profile personal
 ```
 
-Run
-```
-npx cdk deploy --profile personal --all
-```
-Should probably build front end distro first...
+Build your frontend assets (FlowForge + Dev Portfolio) **before** deploying the full stack.
 
+---
 
-AWS wonkiness- Only us-east-1 can have make certificates, but can't deploy and pass values by cdk.
-So, two step for making certs the first and only the first time
-```
+## 🌐 Certificate Handling (One-Time Setup)
+
+AWS only allows certificate creation for CloudFront in `us-east-1`.
+
+If this is your first deploy and you need certs:
+
+```bash
+# Bootstrap us-east-1 for cert creation
 npx cdk bootstrap aws://<ACCOUNT_NUMBER>/us-east-1 --profile personal
+
+# Deploy cert and static site stacks separately
 npx cdk deploy FlowForgeCertStack --profile personal
 npx cdk deploy FlowForgeStaticSiteStack --profile personal
 ```
-After that, the cert arn is saved in parameter store and doesn't need to be updated
 
+The cert ARN will be saved to Parameter Store for reuse. You don’t need to redeploy cert stacks after the first time unless rotating certs.
 
-export AWS_PROFILE=personal
+---
 
+## 📦 Deploy All Stacks
 
-
-
-# Seed Admin User Manually if first deploy
-Don't forget to create the initial admin user in Cognito manually if this is the first deployment.
-Adjust the temporary password when using this command.
+```bash
+npx cdk deploy --profile personal --all
 ```
+
+---
+
+## 👤 Seed Initial Admin User (Manual Step)
+
+Manually create the first Cognito admin user if this is the initial deployment:
+
+```bash
 aws cognito-idp admin-create-user \
   --user-pool-id us-east-2_QMLJskyI3 \
   --username admin@flowforge.com \
@@ -45,12 +83,11 @@ aws cognito-idp admin-create-user \
   --temporary-password ********** \
   --profile personal \
   --region us-east-2
-
 ```
 
-Then set a permanent password for the user in the Cognito console.
-Don't forget to update the password in the command below.
-```
+Then set a permanent password:
+
+```bash
 aws cognito-idp admin-set-user-password \
   --user-pool-id us-east-2_QMLJskyI3 \
   --username admin@flowforge.com \
@@ -58,5 +95,12 @@ aws cognito-idp admin-set-user-password \
   --permanent \
   --profile personal \
   --region us-east-2
-
 ```
+
+---
+
+## 📝 Notes to Self
+
+- Dev Portfolio is deployed via a separate stack using static S3 + CloudFront
+- Root domain redirect is optional and configured separately
+- Future improvement: automate environment switching (`dev`, `prod`, etc.)

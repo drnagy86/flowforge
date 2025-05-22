@@ -1,3 +1,4 @@
+// cdk/lib/root-redirect-stack.ts
 import { Stack, StackProps } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as route53 from 'aws-cdk-lib/aws-route53';
@@ -14,9 +15,9 @@ export class RootRedirectStack extends Stack {
       domainName: rootDomain,
     });
 
-    const certArn = this.node.tryGetContext('certArnRoot') || this.node.tryGetContext('certArnDevSite');
+    const certArn = this.node.tryGetContext('certArnUnified');
     if (!certArn) {
-      throw new Error('Missing certArnRoot or certArnDevSite context value');
+      throw new Error('Missing certArnRoot context value');
     }
 
     new RootRedirectSite(this, 'RootRedirectSite', {

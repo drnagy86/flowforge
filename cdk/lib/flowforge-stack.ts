@@ -4,8 +4,11 @@ import * as route53 from 'aws-cdk-lib/aws-route53';
 import { StaticSite } from './static-site';
 
 export class FlowForgeStaticSiteStack extends Stack {
-  constructor(scope: Construct, id: string, props: StackProps) {
-    super(scope, id, props);
+  constructor(scope: Construct, 
+    id: string, 
+    props: StackProps, 
+    ) {
+      super(scope, id, props);
 
     const rootDomain = 'derricknagy.dev';
     const subDomain = 'flowforge';
@@ -19,7 +22,7 @@ export class FlowForgeStaticSiteStack extends Stack {
     if (!certArn) throw new Error('Missing certArnUnified context value');
 
     new StaticSite(this, 'FlowForgeSite', {
-      domainNames: [domainName], // <-- needs to be array now
+      domainNames: [domainName], 
       rootDomain,
       hostedZone,
       certArn,

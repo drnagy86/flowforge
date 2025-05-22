@@ -1,3 +1,4 @@
+// cdk/lib/root-redirect-site.ts
 import { Construct } from 'constructs';
 import {
   aws_s3 as s3,
@@ -8,8 +9,8 @@ import {
   RemovalPolicy,
   CfnOutput,
 } from 'aws-cdk-lib';
-import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
-import { RootRedirectStack } from '../lib/root-redirect-stack';
+import { S3StaticWebsiteOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
+// import { RootRedirectStack } from '../lib/root-redirect-stack';
 
 
 export interface RootRedirectSiteProps {
@@ -40,7 +41,8 @@ export class RootRedirectSite extends Construct {
     const distribution = new cloudfront.Distribution(this, 'RootDistribution', {
       defaultRootObject: '',
       defaultBehavior: {
-        origin: new S3Origin(redirectBucket),
+        // origin: new S3Origin(redirectBucket),
+        origin: new S3StaticWebsiteOrigin(redirectBucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       },
       domainNames: [props.domainName],

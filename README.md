@@ -1,93 +1,86 @@
-# FlowForge
+# Welcome!
 
-**FlowForge** is a dev portfolio project. 
-
-## Showcase Project
-
-This project is designed to showcase:
-
-- Modern web development practices with React and TypeScript
-- A cloud-native, serverless architecture using AWS CDK
-- Scalable infrastructure patterns
-- Real-world documentation workflows
-- AI integration for improved user experience
-- Role-based access control with audit support
+This repo is a showcase of some projects I wanted to take on to explore and learn some new technologies while updating my portfolio page.
 
 ---
 
-## Stack
-This project is a full-stack example application demonstrating:
-- TypeScript + React frontend
-- AWS CDK infrastructure (fully serverless)
-- Lambda + App Sync GraphQL
-- Cognito for authentication and user management
-- DynamoDB for persistence
-- AI-powered support chat (OpenAI or Amazon Bedrock)
-- Full documentation including user stories, architecture, and requirements
+## 🔧 What’s Included
 
-## Features
+### 1. **FlowForge App** (Concept Web App)
 
-- Role-based authentication (Sales, Approver, Admin, Partner)
-- Workflow engine: sales → partner form → approval
-- AI assistant: context-aware chatbot to guide users
-- Admin dashboard: view requests, users, audit logs
-- Approval history and audit trail
-- Fully serverless architecture using AWS CDK
+A serverless web application demonstrating:
+
+- React + TypeScript frontend
+- AWS CDK (TypeScript) for infrastructure-as-code
+- Cognito for authentication
+- AppSync GraphQL API + Lambda resolvers
+- DynamoDB for data persistence
+- Role-based access control and audit logging
+- AI chatbot assistant via OpenAI or Bedrock
+
+### 2. **Dev Portfolio** (Static Site)
+
+A minimal, fast-loading portfolio site built with:
+
+- Vite + TailwindCSS
+- HTML + vanilla JS
+- Deployed as a static S3 website
+- Linked via root redirect from `derricknagy.dev`
 
 ---
 
-
-## Project Structure
+## 🧱 Project Structure (Highlights)
 
 ```bash
 .
-├── LICENSE
-├── README.md
-├── backend               # Lambda functions and backend logic
-├── cdk                   # AWS CDK infrastructure (TypeScript)
-│   ├── bin               # CDK entrypoint
-│   ├── lib               # CDK stacks: auth, users, certificates
-│   ├── test              # Unit tests for CDK stacks
-├── docs                  # Product specs and technical documentation
-│   └── product-specs
-│       └── epic-admin-access
-├── frontend-client       # React + TypeScript web client
-│   ├── public
-│   ├── src
-│   │   ├── pages         # login, confirm, home
-│   │   ├── features      # auth module
-│   │   ├── tests
-└── scratch               # Temporary or sandbox scripts/files
+├── backend             # Lambda handlers and supporting logic
+├── cdk                # AWS CDK project (infra for app + dev site)
+├── devsite            # Static portfolio site (Vite + TailwindCSS)
+├── docs               # Product specs, architecture, and planning
+├── frontend-client    # React + TypeScript web client for FlowForge
+├── scratch            # Temporary files/scripts
+└── README.md          # You’re here
 ```
 
 ---
 
-## Documentation
+## 📘 Documentation
 
-Find product planning and architectural documentation in the `/docs` folder.
+Documentation lives in the `/docs` directory and relevant `README.md` files throughout the project. Key files include:
 
-- `user-stories.md`: User-centric goals and workflow mapping  
-- `requirements.md`: Functional and non-functional requirements  
-- `architecture.md`: System design, diagrams, and data flow descriptions  
-
-Note: Keep these updated with each new feature branch or epic.
+| File / Location                  | Purpose                                               |
+|----------------------------------|--------------------------------------------------------|
+| `docs/product-specs/*`          | User stories, epics, and functional specs              |
+| `frontend-client/ui-ux-guide.md`| UI/UX design principles for the web app                |
+| `cdk/README.md`                 | AWS CDK stack overview and deployment instructions     |
+| `devsite/README.md`            | Dev portfolio overview, build steps, and deployment    |
+| `setup.md`                      | Local development and environment setup instructions   |
 
 ---
 
-## Tech Stack
+## 🚀 Goals
+
+- Showcase modern, scalable full-stack patterns using AWS
+- Demonstrate a polished frontend experience with React + Tailwind
+- Highlight developer portfolio and experience in a clean, minimal way
+- Maintain clear documentation and structure for real-world relevance
+
+---
+
+## 🛠 Tech Stack
 
 | Layer          | Tech                                 |
 |----------------|--------------------------------------|
-| Frontend       | React + TypeScript                   |
-| Backend        | Node.js + TypeScript (AWS Lambda)    |
-| Infrastructure | AWS CDK (TypeScript)                 |
+| Frontend       | React + TypeScript, TailwindCSS      |
+| Backend        | Node.js + TypeScript (Lambda)        |
+| Infrastructure | AWS CDK                              |
+| Auth           | Amazon Cognito                       |
 | Database       | DynamoDB                             |
-| Authentication | Amazon Cognito                       |
 | AI Assistant   | OpenAI API / Amazon Bedrock          |
-| DevOps         | GitHub Actions, CDK Pipelines        |
+| Dev Tools      | Vite, GitHub Actions, Jest           |
 
 ---
 
-## License
+## 📝 License
 
 MIT

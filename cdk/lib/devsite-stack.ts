@@ -1,8 +1,9 @@
+// cdk/lib/devsite-stack.ts
 import { Stack, StackProps, RemovalPolicy, CfnOutput } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as cloudfront from 'aws-cdk-lib/aws-cloudfront';
-import { S3Origin } from 'aws-cdk-lib/aws-cloudfront-origins';
+import { S3StaticWebsiteOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
 import * as s3deploy from 'aws-cdk-lib/aws-s3-deployment';
 import * as route53 from 'aws-cdk-lib/aws-route53';
 import * as acm from 'aws-cdk-lib/aws-certificatemanager';
@@ -40,10 +41,10 @@ export class DevSiteStack extends Stack {
 
     const distribution = new cloudfront.Distribution(this, 'DevSiteDistribution', {
       defaultBehavior: {
-        origin: new S3Origin(siteBucket),
+        origin: new S3StaticWebsiteOrigin(siteBucket),
         viewerProtocolPolicy: cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       },
-      domainNames: [wwwDomain, rootDomain], // <-- now both www and root
+      domainNames: [wwwDomain], 
       certificate,
     });
 
@@ -62,11 +63,11 @@ export class DevSiteStack extends Stack {
     });
 
     // A Record for root domain
-    new route53.ARecord(this, 'DevSiteAliasRecordRoot', {
-      zone: hostedZone,
-      recordName: '', // root domain
-      target: route53.RecordTarget.fromAlias(new targets.CloudFrontTarget(distribution)),
-    });
+    // new route53.ARecord(this, 'DevSiteAliasRecordRoot', {
+    //   zone: hostedZone,
+    //   recordName: '', // root domain
+    //   target: route53.RecordTarget.fromAlias(new targets.CloudFrontTarget(distribution)),
+    // });
 
     new CfnOutput(this, 'DevSiteURLWWW', {
       value: `https://${wwwDomain}`,

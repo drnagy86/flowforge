@@ -12,7 +12,7 @@ import {
 import { S3StaticWebsiteOrigin } from 'aws-cdk-lib/aws-cloudfront-origins';
 
 export interface StaticSiteProps {
-  domainNames: string[]; // <-- array now
+  domainNames: string[]; 
   rootDomain: string;
   siteAssetPath: string;
   certArn: string;

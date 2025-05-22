@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// cdk/bin/cdk.ts
 import * as cdk from 'aws-cdk-lib';
 import { FlowForgeStaticSiteStack } from '../lib/cdk-stack';
 import { FlowForgeAuthStack } from '../lib/auth-stack';
@@ -22,13 +23,11 @@ if (target === 'all' || target === 'cert') {
   });
 }
 
-
-
 // FlowForge site + auth stack
 if (target === 'all' || target === 'flowforge') {
   const staticSiteStack = new FlowForgeStaticSiteStack(app, 'FlowForgeStaticSiteStack', {
-    env: commonEnv,
-  });
+    env: commonEnv, 
+  }, );
 
   new FlowForgeAuthStack(app, 'FlowForgeAuthStack', {
     env: commonEnv,
