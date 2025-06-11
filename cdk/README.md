@@ -56,6 +56,10 @@ npx cdk bootstrap aws://<ACCOUNT_NUMBER>/us-east-1 --profile personal
 # Deploy cert and static site stacks separately
 npx cdk deploy FlowForgeCertStack --profile personal
 npx cdk deploy FlowForgeStaticSiteStack --profile personal
+
+# deploy flowforge seperately 
+cdk deploy FlowForgeAuthStack FlowForgeApiStack --require-approval never --context STACK=auth-api --profile personal
+
 ```
 
 The cert ARN will be saved to Parameter Store for reuse. You don’t need to redeploy cert stacks after the first time unless rotating certs.

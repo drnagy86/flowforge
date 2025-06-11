@@ -1,0 +1,26 @@
+# graphql/schema.graphql
+
+type User {
+  id: ID!
+  email: String!
+  createdAt: AWSDateTime!
+}
+
+input CreateUserInput {
+  id: ID!          # at minimum, pass a unique ID
+  email: String!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): User
+}
+
+type Query {
+  getUser(id: ID!): User
+  listUsers: [User]
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
